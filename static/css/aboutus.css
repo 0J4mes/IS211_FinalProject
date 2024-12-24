@@ -1,0 +1,27 @@
+/* About Page Styles */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.about-container h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.about-container p {
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.6;
+}

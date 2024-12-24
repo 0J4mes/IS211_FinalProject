@@ -1,0 +1,28 @@
+/* Blogs Page Styles */
+.blog-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.blog-post {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.blog-post img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.blog-post h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.blog-post p {
+    color: #555;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/logout">Logout</a> <!-- Logout link only -->
+        </nav>
+    </header>
+    <main>
+        <h2>Create a New Post</h2>
+        <form method="post">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" required></textarea><br><br>
+
+            <button type="submit">Create Post</button>
+        </form>
+
+        <h2>Your Posts</h2>
+        {% for post in posts %}
+        <article>
+            <h3>{{ post[1] }}</h3>
+            <p>{{ post[2][:100] }}...</p>
+            <small>By {{ post[3] }} on {{ post[4] }}</small>
+            <a href="/edit/{{ post[0] }}">Edit</a> | <a href="/delete/{{ post[0] }}">Delete</a>
+        </article>
+        {% endfor %}
+    </main>
+</body>
+</html>

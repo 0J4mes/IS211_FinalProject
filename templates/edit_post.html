@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Edit Post</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/dashboard">Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Edit Blog Post</h2>
+        <form method="post" action="/edit/{{ post[0] }}">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" value="{{ post[1] }}" required><br><br>
+
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" rows="10" required>{{ post[2] }}</textarea><br><br>
+
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author" value="{{ post[3] }}" required><br><br>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </main>
+</body>
+</html>

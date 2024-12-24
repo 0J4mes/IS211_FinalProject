@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add New Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Add New Post</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/blogs">Blogs</a>
+            <a href="/dashboard">Dashboard</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Create a New Blog Post</h2>
+        <form method="post" action="/dashboard">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" placeholder="Enter title" required><br><br>
+
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" placeholder="Write your content here..." rows="10" required></textarea><br><br>
+
+            <label for="author">Author:</label><br>
+            <input type="text" id="author" name="author" placeholder="Your name" required><br><br>
+
+            <button type="submit">Create Post</button>
+        </form>
+    </main>
+</body>
+</html>
